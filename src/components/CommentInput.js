@@ -18,7 +18,8 @@ class CommentInput extends Component{
     }
   }
   componentDidMount(){
-    this.textarea.focus()
+    // this.textarea.focus()
+    this.input.focus()
   }
   handleUsernameBlur(event){
     if(this.props.onUserNameInputBlur){
@@ -53,6 +54,7 @@ class CommentInput extends Component{
           <div className="comment-field-input">
             <input
               value={this.state.username}
+              ref={(input)=>this.input=input}
               onBlur={this.handleUsernameBlur.bind(this)}
               onChange={this.handleUsernameChang.bind(this)}/>
           </div>

@@ -14,17 +14,18 @@ class CommentInputContainer extends Component {
     this.state = {username: ''}
   }
 
-  componentWillMount () {
-    this._loadUsername()
-  }
-
-  _loadUsername () {
-    const username = localStorage.getItem('username')
-    alert(typeof username)
-    if(username){
-      this.setState({username:username})
-    }
-  }
+  // componentWillMount () {
+  //   this._loadUsername()
+  // }
+  //
+  // _loadUsername () {
+  //   const username = localStorage.getItem('username')
+  //   alert(typeof username)
+  //   // bug:加载时，用户名栏会出现object
+  //   if(username){
+  //     this.setState({username:username})
+  //   }
+  // }
 
   _saveUsername (username) {
     localStorage.setItem('username',username)
