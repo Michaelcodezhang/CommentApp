@@ -19,14 +19,14 @@ class CommentInputContainer extends Component {
   }
 
   _loadUsername () {
-    const username = localStorage.getItem('username')
-    if (username) {
-      this.setState({username:username})
+    const username = JSON.parse(localStorage.getItem('username'))
+    if(username){
+      this.setState(username)
     }
   }
 
   _saveUsername (username) {
-    localStorage.setItem('username', username)
+    localStorage.setItem('username', JSON.stringify(username))
   }
 
   handleSubmitComment (comment) {
