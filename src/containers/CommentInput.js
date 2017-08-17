@@ -21,7 +21,7 @@ class CommentInputContainer extends Component {
   _loadUsername () {
     const username = localStorage.getItem('username')
     if (username) {
-      this.setState({username})
+      this.setState({username:username})
     }
   }
 

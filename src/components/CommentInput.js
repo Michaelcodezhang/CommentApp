@@ -22,7 +22,7 @@ class CommentInput extends Component{
   }
   handleUsernameBlur(event){
     if(this.props.onUserNameInputBlur){
-      this.props.onUserNameInputBlur(event)
+      this.props.onUserNameInputBlur(event.target.value)
     }
   }
   handleUsernameChang(event){
